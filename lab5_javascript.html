@@ -4,36 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contoh Program Javascript</title>
+    <title>Daftar Menu</title>
     <script language="javascript">
-        function test() {
-            val1 = window.prompt("Input Nilai (1-5): ")
-            switch (val1) {
-                case "1":
-                    document.write("Bilangan Satu")
-                    break
-                case "2":
-                    document.write("Bilangan Dua")
-                    break
-                case "3":
-                    document.write("Bilangan Tiga")
-                    break
-                case "4":
-                    document.write("Bilangan Empat")
-                    break
-                case "5":
-                    document.write("Bilangan Lima")
-                    break
-                default:
-                    document.write("Bilangin Lainnya")
+        function hitung(ele) {
+            var total = document.getElementById("total").value;
+            total = (total ? parseInt(total) : 0);
+            var harga = 0;
 
+            if (ele.checked){
+                harga = ele.value;
+                total += parseInt(harga);
             }
+            else{
+                harga = ele.value;
+                if (total > 0)
+                    total -= parseInt(harga);
+            }
+
+            document.getElementById("total").value = total;
         }
+
     </script>
 </head>
 
 <body>
-    <input type="button" name="button1" value="Click Button!" onclick=test()>
+    <h1>Daftar Menu Makanan</h1>
+        <label><input type="checkbox" value="5000" id="menu1" onClick="hitung(this)"> Ayam Goreng Rp. 5.000 </label><br />
+        <label><input type="checkbox" value="500" id="menu1" onClick="hitung(this)"> Tempe Goreng Rp. 500 </label><br />
+        <label><input type="checkbox" value="2500" id="menu1" onClick="hitung(this)"> Telur Dadar Rp. 2.500 </label><hr />
+        <strong>Total Bayar : Rp. <input id="total" type="text" /></strong>
 </body>
 
 </html>
