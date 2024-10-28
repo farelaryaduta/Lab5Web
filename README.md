@@ -77,6 +77,7 @@ Ketika Button Button ini Dipencet, Misalnya Button "Latar Belakang Hijau" Dipenc
 ![26](screenshots/26.png)
 Ketika semua Checkbox di centang, itu akan memunculkan Total Harga untuk Semua Makanan
 ![27](screenshots/27.png)
+
 Ketika semua Checkbox tidak di centang, itu akan memunculkan 0 Rupiah pada Total Harga
 ![28](screenshots/28.png)
 
